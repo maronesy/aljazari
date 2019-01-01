@@ -122,7 +122,6 @@ STATIC_URL = '/static/'
 #Heroku settings
 
 # ROOT_PATH = os.path.dirname(__file__)
-if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
