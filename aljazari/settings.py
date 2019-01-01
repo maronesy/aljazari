@@ -122,17 +122,18 @@ STATIC_URL = '/static/'
 #Heroku settings
 
 # ROOT_PATH = os.path.dirname(__file__)
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
-    }
 
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://localhost')
+}
 
-    ALLOWED_HOSTS = ['*']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__)),
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
-    )
+ALLOWED_HOSTS = ['*']
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)),
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
